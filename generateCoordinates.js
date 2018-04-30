@@ -25,8 +25,8 @@ function createCoordinatesAroundPoint(point) {
 function createCoordinates() {
     const coordinates = [];
     for (let i = 0; i < 5; i++) {
-        const m = Math.floor(Math.log(Math.random() * 10));
-        const n = Math.floor(Math.log(Math.random() * 2));
+        const m = Math.floor(i);
+        const n = Math.floor(i * 2);
         const fPoint = Point(m, n);
         const fPointSigma = createCoordinatesAroundPoint(fPoint);
         coordinates.push(fPoint)
@@ -37,6 +37,6 @@ function createCoordinates() {
 
 
 const coordinates = createCoordinates();
-const data = JSON.stringify({coordinates});
+const data = JSON.stringify({ coordinates });
 
 fs.writeFileSync("coordinates.json", data)
