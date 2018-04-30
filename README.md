@@ -1,3 +1,3 @@
 # testJSScripts
 
-Collection of JS Scripts I code to prototype a solution.
+Collection of JS Scripts I wrote while prototype a solution.
